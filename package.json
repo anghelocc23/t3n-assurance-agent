@@ -1,0 +1,28 @@
+{
+  "name": "t3n-assurance-agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A deterministic vendor-assurance agent with a Terminal 3 TEE contract and auditable policy decisions.",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "demo": "tsx src/demo.ts",
+    "evidence": "tsx src/evidence.ts",
+    "verify": "npm run typecheck && npm test && npm run demo",
+    "t3n:smoke": "tsx src/t3n/smoke.ts",
+    "t3n:deploy": "tsx src/t3n/deploy.ts"
+  },
+  "dependencies": {
+    "@terminal3/t3n-sdk": "5.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "tsx": "^4.20.3",
+    "typescript": "^5.9.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
+
