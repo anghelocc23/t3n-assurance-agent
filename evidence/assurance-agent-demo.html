@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Assurance Agent — deterministic decision evidence</title>
+<style>
+:root{color-scheme:dark;--bg:#07101d;--panel:#101c2e;--line:#253753;--text:#eff6ff;--muted:#94a9c7;--green:#3ddc97;--amber:#ffc857;--red:#ff6b6b;--blue:#71b7ff}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% -10%,#15315c 0,transparent 36%),var(--bg);color:var(--text);font:15px/1.45 Inter,Segoe UI,Arial,sans-serif}.wrap{max-width:1400px;margin:auto;padding:54px 50px 42px}nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:44px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.02em}.mark{display:grid;place-items:center;width:38px;height:38px;border:1px solid #4e79b5;border-radius:12px;background:#122647;color:var(--blue)}.stamp{padding:8px 12px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:12px}.hero{display:grid;grid-template-columns:1.5fr 1fr;gap:48px;align-items:end;margin-bottom:32px}.hero h1{max-width:760px;margin:0;font-size:48px;line-height:1.05;letter-spacing:-.04em}.hero p{margin:0;color:var(--muted);font-size:17px}.trust{display:flex;gap:10px;flex-wrap:wrap;margin-top:19px}.trust span{padding:8px 11px;background:#0c1a2d;border:1px solid var(--line);border-radius:8px;color:#bcd0e9;font-size:12px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.decision-card{border:1px solid var(--line);border-top:3px solid var(--blue);border-radius:16px;background:linear-gradient(160deg,#13223a,#0c1626);padding:22px;box-shadow:0 20px 50px #0004}.decision-card.approve{border-top-color:var(--green)}.decision-card.review{border-top-color:var(--amber)}.decision-card.block{border-top-color:var(--red)}header{display:flex;justify-content:space-between;gap:16px;align-items:start;margin-bottom:20px}h2{margin:1px 0 0;font-size:22px}.decision-card header strong{text-transform:uppercase;letter-spacing:.1em;font-size:11px;padding:7px 9px;border-radius:7px}.approve header strong{background:#143c32;color:var(--green)}.review header strong{background:#49391c;color:var(--amber)}.block header strong{background:#492426;color:var(--red)}.eyebrow{margin:0;color:var(--muted);font-size:10px;letter-spacing:.13em;text-transform:uppercase}.metric{display:flex;justify-content:space-between;padding:10px 0;border-top:1px solid #20314b}.metric span{color:var(--muted)}ul{list-style:none;margin:12px 0 18px;padding:0;background:#091424;border-radius:10px}li{display:grid;grid-template-columns:1fr auto auto;gap:10px;padding:9px 11px;border-bottom:1px solid #1d2d45}li:last-child{border:0}li span{text-transform:capitalize}li small{color:var(--muted)}section{margin-top:15px}.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:7px}.reason,.action,.quiet{padding:5px 7px;border:1px solid #2c4262;border-radius:6px;background:#0b1829;color:#c6d8ed;font:10px/1.3 Consolas,monospace}.action{border-color:#51452d;color:#f2ce76}.quiet{color:var(--muted)}footer{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}.proof{padding:13px 15px;border:1px solid var(--line);border-radius:10px;background:#0c1728}.proof b{display:block;font-size:13px}.proof span{color:var(--muted);font-size:11px}@media(max-width:900px){.wrap{padding:28px 20px}.hero,.grid{grid-template-columns:1fr}.hero h1{font-size:36px}footer{grid-template-columns:1fr 1fr}}
+</style></head><body><main class="wrap">
+<nav><div class="brand"><span class="mark">A3</span> ASSURANCE AGENT</div><span class="stamp">Policy v1 · generated 2026-09-02</span></nav>
+<div class="hero"><div><h1>Vendor decisions that cannot be talked out of policy.</h1><div class="trust"><span>Deterministic Rust/WASM</span><span>T3N tenant-private storage</span><span>No HTTP egress</span><span>Prompt-injection resistant</span></div></div><p>Three golden cases run through the same versioned policy used by the TEE contract. Free-form notes never participate in authorization.</p></div>
+<div class="grid"><article class="decision-card approve">
+    <header><div><p class="eyebrow">Vendor</p><h2>acme-payments</h2></div><strong>approve</strong></header>
+    <div class="metric"><span>Annual spend</span><b>$320,000</b></div>
+    <div class="metric"><span>DPA signed</span><b>Yes</b></div>
+    <ul>
+    <li><span>soc2</span><b>210d</b><small>verified</small></li>
+    <li><span>penetration test</span><b>160d</b><small>verified</small></li></ul>
+    <section><p class="eyebrow">Reason codes</p><div class="chips"><span class="reason">all_controls_satisfied</span></div></section>
+    <section><p class="eyebrow">Required actions</p><div class="chips"><span class="action">record_approval</span><span class="action">procurement_dual_approval</span></div></section>
+  </article><article class="decision-card review">
+    <header><div><p class="eyebrow">Vendor</p><h2>northwind-ai</h2></div><strong>review</strong></header>
+    <div class="metric"><span>Annual spend</span><b>$48,000</b></div>
+    <div class="metric"><span>DPA signed</span><b>Yes</b></div>
+    <ul>
+    <li><span>soc2</span><b>24d</b><small>verified</small></li>
+    <li><span>penetration test</span><b>200d</b><small>verified</small></li></ul>
+    <section><p class="eyebrow">Reason codes</p><div class="chips"><span class="reason">expiring_soc2</span><span class="reason">high_findings_penetration_test</span></div></section>
+    <section><p class="eyebrow">Required actions</p><div class="chips"><span class="action">security_owner_review</span></div></section>
+  </article><article class="decision-card block">
+    <header><div><p class="eyebrow">Vendor</p><h2>legacy-crm</h2></div><strong>block</strong></header>
+    <div class="metric"><span>Annual spend</span><b>$90,000</b></div>
+    <div class="metric"><span>DPA signed</span><b>No</b></div>
+    <ul>
+    <li><span>soc2</span><b>-3d</b><small>verified</small></li>
+    <li><span>penetration test</span><b>90d</b><small>verified</small></li></ul>
+    <section><p class="eyebrow">Reason codes</p><div class="chips"><span class="reason">dpa_missing</span><span class="reason">expired_soc2</span><span class="reason">critical_findings_penetration_test</span></div></section>
+    <section><p class="eyebrow">Required actions</p><div class="chips"><span class="action">remediate_blocking_controls</span><span class="action">rerun_assessment</span></div></section>
+  </article></div>
+<footer><div class="proof"><b>7/7 TypeScript tests</b><span>Strict mode and adversarial coverage</span></div><div class="proof"><b>5/5 Rust tests + doctest</b><span>Shared approve/review/block vectors</span></div><div class="proof"><b>178,588-byte WASM</b><span>WASI Preview 2 optimized component</span></div><div class="proof"><b>Private map + explicit ACL</b><span>Numeric contract ID is sole reader/writer</span></div></footer>
+</main></body></html>
