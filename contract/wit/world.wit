@@ -1,0 +1,25 @@
+package z:vendor-assurance@0.1.0;
+
+world vendor-assurance {
+    import host:tenant/tenant-context@1.0.0;
+    import host:interfaces/logging@2.1.0;
+    import host:interfaces/kv-store@2.1.0;
+
+    export contracts;
+}
+
+interface contracts {
+    record generic-input {
+        input: option<list<u8>>,
+        user-profile: option<list<u8>>,
+        context: option<list<u8>>,
+    }
+
+    /// Apply the immutable vendor-assurance policy and persist the decision in
+    /// the tenant-private assurance-decisions map.
+    assess-vendor: func(req: generic-input) -> result<list<u8>, string>;
+
+    /// Read the latest decision for a vendor from tenant-private storage.
+    read-decision: func(req: generic-input) -> result<list<u8>, string>;
+}
+
