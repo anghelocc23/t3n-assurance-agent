@@ -1,5 +1,7 @@
 # Assurance Agent for Terminal 3
 
+[![verify](https://github.com/anghelocc23/t3n-assurance-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/anghelocc23/t3n-assurance-agent/actions/workflows/ci.yml)
+
 Assurance Agent turns vendor-security evidence into a deterministic procurement decision inside a Terminal 3 trusted execution environment (TEE). It is deliberately small, reproducible, and maintainable: policy is code, free-form notes cannot override controls, raw reports never enter the public output, and the latest decision is kept in a tenant-private T3N map.
 
 ## Why an enterprise would use it
@@ -33,6 +35,18 @@ T3N agent session -> z:<tenant>:vendor-assurance (Rust/WASM in TEE)
 ```
 
 The WIT world imports only `tenant-context`, `logging`, and `kv-store`. There is no outbound HTTP capability, so the deployed contract cannot exfiltrate evidence.
+
+## Executable decision evidence
+
+![Assurance Agent decision dashboard](evidence/assurance-agent-demo.png)
+
+The dashboard is generated from the same scenarios exercised by the policy tests; it is not a hand-written mockup.
+
+| Scenario | Evidence signal | Decision | Stable reason code |
+| --- | --- | --- | --- |
+| Verified, current evidence | No critical/high findings; DPA and dual approval present | `approve` | `all-controls-satisfied` |
+| High-spend vendor missing second approver | Valid evidence, incomplete procurement control | `review` | `dual-approval-required` |
+| Critical finding remains open | Verified report with unresolved critical exposure | `block` | `critical-findings-open` |
 
 ## Verify locally
 
