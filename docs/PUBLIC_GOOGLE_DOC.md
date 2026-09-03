@@ -118,12 +118,12 @@ The client never writes or prints the key.
 
 The final public submission will insert the following after sandbox activation:
 
-- **Public repository:** `PENDING_PUBLICATION`
+- **Public repository:** https://github.com/anghelocc23/t3n-assurance-agent
 - **Tenant DID:** `PENDING_T3N_ACTIVATION`
 - **Canonical contract:** `PENDING_T3N_DEPLOYMENT`
 - **Numeric contract ID:** `PENDING_T3N_DEPLOYMENT`
 - **First live decision:** `PENDING_T3N_DEPLOYMENT`
-- **Local decision screenshot:** `evidence/assurance-agent-demo.png` (generated from executable golden cases).
+- **Local decision screenshot:** https://github.com/anghelocc23/t3n-assurance-agent/blob/main/evidence/assurance-agent-demo.png (generated from executable golden cases).
 - **Live screenshots pending activation:** T3N authentication/credit balance, contract registration, and first decision.
 
 ## Maintenance and handover
